@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — ClipShot</title>
+<meta name="description" content="ClipShot's privacy policy. The short version: nothing leaves your Mac. Ever." />
+<link rel="icon" type="image/png" href="img/icon-256.png" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: radial-gradient(ellipse at top, #1e3a8a 0%, #000 70%);
+    color: #f4f6fb;
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+  header {
+    display: flex; align-items: center;
+    margin-bottom: 32px;
+  }
+  header img { width: 64px; height: 64px; border-radius: 14px; margin-right: 16px; }
+  header div h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
+  header div p { color: #9aa3b8; font-size: 14px; }
+
+  .effective {
+    color: #9aa3b8; font-size: 13px; margin-bottom: 32px;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 36px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  h2:first-of-type { margin-top: 16px; }
+  h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+  p { color: #d4dbe6; margin-bottom: 14px; }
+  ul { margin: 0 0 20px 24px; color: #d4dbe6; }
+  li { margin-bottom: 8px; }
+  code {
+    background: rgba(255,255,255,0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #c5d0e6;
+  }
+  .tldr {
+    background: rgba(96, 165, 250, 0.08);
+    border-left: 3px solid #60a5fa;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin: 24px 0 36px;
+  }
+  .tldr strong { color: #60a5fa; font-weight: 600; }
+
+  a.back { color: #60a5fa; text-decoration: none; font-size: 14px; }
+  a.back:hover { text-decoration: underline; }
+  a { color: #60a5fa; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: 60px;
+    color: #6e7892;
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a { color: #6e7892; margin: 0 12px; text-decoration: none; }
+  footer a:hover { color: #f4f6fb; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <img src="img/icon-256.png" alt="ClipShot icon" />
+    <div>
+      <h1>Privacy Policy</h1>
+      <p>The short version: nothing leaves your Mac. Ever.</p>
+    </div>
+  </header>
+
+  <a class="back" href="index.html">← Back to ClipShot</a>
+
+  <p class="effective">
+    <strong>Effective date:</strong> May 23, 2026<br />
+    <strong>Last updated:</strong> May 23, 2026
+  </p>
+
+  <div class="tldr">
+    <strong>TL;DR:</strong> ClipShot has no network code. It does not collect, transmit, share, or sell any data.
+    Everything you do with ClipShot stays on your Mac.
+  </div>
+
+  <h2>What data ClipShot accesses</h2>
+  <p>ClipShot reads the following data, locally on your Mac only:</p>
+  <ul>
+    <li>
+      <strong>Images on the clipboard.</strong> When you copy an image or take a screenshot to the clipboard,
+      ClipShot detects it so it can save it to your history.
+    </li>
+    <li>
+      <strong>Screenshot files.</strong> ClipShot watches the folder you select for new screenshot files.
+      Access is granted via a security-scoped bookmark you control through macOS's standard open panel.
+    </li>
+  </ul>
+
+  <h2>What ClipShot does with that data</h2>
+  <ul>
+    <li>
+      Saves screenshots and copied images <strong>locally</strong> in
+      <code>~/Library/Containers/com.jcmorla.clipshot/Data/Library/Application Support/ClipShot/history/</code>,
+      organized by month and year.
+    </li>
+    <li>
+      Keeps a rolling history of your most recent captures, accessible from the menu bar.
+    </li>
+    <li>
+      <strong>Does not send anything to the internet.</strong> Ever. ClipShot contains no HTTP client,
+      no URLSession calls, no telemetry SDK, no analytics framework.
+    </li>
+  </ul>
+
+  <h2>What ClipShot does <em>not</em> do</h2>
+  <ul>
+    <li>❌ Does not upload your screenshots to any server.</li>
+    <li>❌ Does not send usage statistics, crash reports, or telemetry.</li>
+    <li>❌ Does not sync to iCloud, Dropbox, or any cloud service by default.</li>
+    <li>❌ Has no user accounts, logins, or authentication.</li>
+    <li>❌ Does not share data with third parties — the developer has no access to your information.</li>
+    <li>❌ Does not use cookies, advertising IDs, or fingerprinting.</li>
+  </ul>
+
+  <h2>Logs</h2>
+  <p>
+    ClipShot writes a technical log file to
+    <code>~/Library/Containers/com.jcmorla.clipshot/Data/Library/Logs/ClipShot.log</code>
+    (rotated at 1 MB, permissions 0600 — only your user can read it). It contains only non-PII technical events
+    like timestamps of configuration changes, I/O errors, and internal warnings. It never contains image content
+    or paths that would reveal user activity.
+  </p>
+
+  <h2>Deleting your data</h2>
+  <p>
+    You can clear your history at any time from the menu: <em>Clear history…</em>, with options to delete
+    everything or only captures older than 30 days. Uninstalling the app removes its data automatically when you
+    delete the container at <code>~/Library/Containers/com.jcmorla.clipshot/</code>.
+  </p>
+
+  <h2>System permissions</h2>
+  <p>
+    ClipShot may prompt for macOS permissions to access folders such as Desktop, Downloads, Documents, or Pictures —
+    only if you configured macOS to save screenshots there. These permissions are managed by macOS, not the app,
+    and can be granted or revoked at any time in <strong>System Settings → Privacy &amp; Security</strong>.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    This policy may be updated in future versions of ClipShot. The "Last updated" date above reflects the most
+    recent change. Material changes will be communicated in the release notes for the corresponding version.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    For privacy or security questions:
+    <a href="https://github.com/yankeemorla01/clipshot/issues/new" rel="noopener">open an issue on GitHub</a>
+    or email <a href="mailto:carlosjeanmorla@msn.com">carlosjeanmorla@msn.com</a>.
+  </p>
+
+  <p style="margin-top: 40px; color: #9aa3b8; font-size: 14px;">
+    This policy applies to ClipShot v2.0 and later. Future versions may add optional features (e.g., iCloud sync),
+    always with explicit opt-in and this policy updated.
+  </p>
+
+  <footer>
+    © 2026 Jean Carlos Morla Genao ·
+    <a href="index.html">Home</a>
+    <a href="support.html">Support</a>
+  </footer>
+</div>
+
+</body>
+</html>

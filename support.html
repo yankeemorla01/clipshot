@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support — ClipShot</title>
+<meta name="description" content="Get help with ClipShot, the Mac menu-bar app that saves every screenshot you take." />
+<link rel="icon" type="image/png" href="img/icon-256.png" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: radial-gradient(ellipse at top, #1e3a8a 0%, #000 70%);
+    color: #f4f6fb;
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+  header {
+    display: flex; align-items: center;
+    margin-bottom: 48px;
+  }
+  header img { width: 64px; height: 64px; border-radius: 14px; margin-right: 16px; }
+  header div h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
+  header div p { color: #9aa3b8; font-size: 14px; }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 40px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  h2:first-of-type { margin-top: 0; }
+  p { color: #d4dbe6; margin-bottom: 16px; }
+  ul { margin: 0 0 24px 24px; color: #d4dbe6; }
+  li { margin-bottom: 8px; }
+
+  .contact-box {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 24px;
+    margin: 32px 0;
+  }
+  .contact-box a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .contact-box a:hover { text-decoration: underline; }
+
+  .faq { margin-top: 32px; }
+  .faq-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .faq-item h3 { font-size: 16px; margin-bottom: 8px; color: #f4f6fb; }
+  .faq-item p { color: #9aa3b8; font-size: 14px; margin-bottom: 0; }
+
+  a.back { color: #60a5fa; text-decoration: none; font-size: 14px; }
+  a.back:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: 60px;
+    color: #6e7892;
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a { color: #6e7892; margin: 0 12px; text-decoration: none; }
+  footer a:hover { color: #f4f6fb; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <img src="img/icon-256.png" alt="ClipShot icon" />
+    <div>
+      <h1>ClipShot Support</h1>
+      <p>Help, FAQs, and how to reach us.</p>
+    </div>
+  </header>
+
+  <a class="back" href="index.html">← Back to ClipShot</a>
+
+  <h2>Contact</h2>
+  <div class="contact-box">
+    <p>
+      The fastest way to get help is to open a GitHub issue:
+    </p>
+    <p>
+      <a href="https://github.com/yankeemorla01/clipshot/issues/new" rel="noopener">Open a support ticket on GitHub →</a>
+    </p>
+    <p style="margin-top:16px;font-size:14px;color:#9aa3b8;">
+      Don't have a GitHub account? You can also email <a href="mailto:carlosjeanmorla@msn.com">carlosjeanmorla@msn.com</a>.
+      We aim to respond within 2 business days.
+    </p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+
+    <div class="faq-item">
+      <h3>Where are my screenshots stored?</h3>
+      <p>
+        ClipShot stores them locally on your Mac, at
+        <code>~/Library/Containers/com.jcmorla.clipshot/Data/Library/Application Support/ClipShot/history/</code>,
+        organized in monthly subfolders. Choose <em>Open history folder</em> in the menu to view them.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does ClipShot upload my screenshots anywhere?</h3>
+      <p>
+        Never. ClipShot has no networking code, no analytics, and no cloud sync. Everything stays on your Mac.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I take a screenshot?</h3>
+      <p>
+        Use the standard macOS shortcuts you already know — <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>3</kbd>,
+        <kbd>4</kbd>, or <kbd>5</kbd>. ClipShot picks up your captures automatically.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I clear my history?</h3>
+      <p>
+        Click the ClipShot icon in the menu bar, then <em>Clear history…</em>. You can delete everything or
+        just items older than 30 days.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What languages does ClipShot support?</h3>
+      <p>
+        English, Spanish, and French. The app picks the language automatically based on your macOS preferences,
+        with English as the fallback.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I change the screenshot folder?</h3>
+      <p>
+        From the menu, choose <em>Preferences → Change screenshot folder…</em> and pick any folder you like.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does ClipShot start automatically with my Mac?</h3>
+      <p>
+        Only if you enabled <em>Open at login</em> during the welcome flow or in Preferences. Otherwise it stays off.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I uninstall ClipShot?</h3>
+      <p>
+        Quit ClipShot from the menu, then drag the app from Applications to the Trash. To remove all data,
+        also delete <code>~/Library/Containers/com.jcmorla.clipshot/</code>.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Jean Carlos Morla Genao ·
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+  </footer>
+</div>
+
+</body>
+</html>

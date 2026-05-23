@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ClipShot — Screenshot history, instantly</title>
+<meta name="description" content="ClipShot is a Mac menu-bar app that quietly saves every screenshot you take. Browse your full history and re-copy any past capture in one click." />
+<meta property="og:title" content="ClipShot — Screenshot history, instantly" />
+<meta property="og:description" content="Every screenshot, saved the moment you take it. 100% local, 100% private." />
+<meta property="og:image" content="img/icon-512.png" />
+<meta name="theme-color" content="#0a0e27" />
+<link rel="icon" type="image/png" href="img/icon-256.png" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-from: #3b82f6;
+    --bg-mid: #1e3a8a;
+    --bg-to: #000;
+    --text: #f4f6fb;
+    --muted: #9aa3b8;
+    --accent: #60a5fa;
+    --card: rgba(255, 255, 255, 0.06);
+    --border: rgba(255, 255, 255, 0.12);
+  }
+  html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: radial-gradient(ellipse at top, var(--bg-mid) 0%, var(--bg-to) 70%);
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px;
+  }
+  main {
+    max-width: 720px;
+    width: 100%;
+    text-align: center;
+    padding: 60px 0 40px;
+  }
+  .icon {
+    width: 128px; height: 128px;
+    border-radius: 28px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(59, 130, 246, 0.25);
+    margin-bottom: 32px;
+  }
+  h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+  }
+  .tagline {
+    font-size: 22px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    font-weight: 400;
+  }
+  .lede {
+    font-size: 17px;
+    color: var(--text);
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+  .cta {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #fff;
+    color: #0a0e27;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 24px rgba(96, 165, 250, 0.25);
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(96, 165, 250, 0.4); }
+  .cta-secondary {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 14px 28px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 920px;
+    width: 100%;
+    margin: 80px auto 40px;
+  }
+  .feature {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: left;
+  }
+  .feature h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .feature p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .privacy-block {
+    margin: 60px auto;
+    max-width: 620px;
+    padding: 32px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    text-align: left;
+  }
+  .privacy-block h2 {
+    display: flex; align-items: center;
+    font-size: 22px; margin-bottom: 16px;
+  }
+  .privacy-block h2::before {
+    content: "🔒"; margin-right: 12px; font-size: 24px;
+  }
+  .privacy-block p { color: var(--muted); font-size: 15px; }
+  .privacy-block a { color: var(--accent); text-decoration: none; }
+  .privacy-block a:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: auto;
+    padding: 40px 0 20px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+    margin: 0 12px;
+  }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 38px; }
+    .tagline { font-size: 18px; }
+    .cta-secondary { display: block; margin: 16px auto 0; max-width: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <img class="icon" src="img/icon-512.png" alt="ClipShot icon" />
+  <h1>ClipShot</h1>
+  <p class="tagline">Screenshot history, instantly.</p>
+  <p class="lede">
+    Every screenshot you take, saved automatically and ready to re-copy from your menu bar.
+    Designed to feel like a native part of macOS — no settings changed, no shortcuts to learn.
+  </p>
+  <a class="cta" href="https://apps.apple.com/" rel="noopener">Download on the Mac App Store</a>
+  <a class="cta-secondary" href="support.html">Need help?</a>
+</main>
+
+<section class="features">
+  <div class="feature">
+    <h3>Every screenshot, saved</h3>
+    <p>Captures appear in your menu-bar history within seconds. No setup needed.</p>
+  </div>
+  <div class="feature">
+    <h3>Re-copy with one click</h3>
+    <p>Past screenshots flow straight back to the clipboard — paste anywhere.</p>
+  </div>
+  <div class="feature">
+    <h3>Floating thumbnail</h3>
+    <p>Click to edit in Markup, or drag the capture straight into any app.</p>
+  </div>
+  <div class="feature">
+    <h3>Organized by month</h3>
+    <p>History grouped in folders like January 2026 — older captures stay findable.</p>
+  </div>
+  <div class="feature">
+    <h3>Pick your folder</h3>
+    <p>Desktop, Downloads, or anywhere you save captures. ClipShot adapts.</p>
+  </div>
+  <div class="feature">
+    <h3>Available in 3 languages</h3>
+    <p>English, Spanish, French — auto-detected from your macOS language.</p>
+  </div>
+</section>
+
+<section class="privacy-block">
+  <h2>Privacy, by design</h2>
+  <p>
+    ClipShot runs 100% on your Mac. No accounts. No servers. No telemetry. Nothing is ever sent to the internet — not a single byte.
+    Your screenshots are yours, and only yours. Read the full <a href="privacy.html">privacy policy</a>.
+  </p>
+</section>
+
+<footer>
+  © 2026 Jean Carlos Morla Genao ·
+  <a href="support.html">Support</a>
+  <a href="privacy.html">Privacy</a>
+</footer>
+
+</body>
+</html>
